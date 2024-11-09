@@ -17,15 +17,16 @@
 	margin-right: auto;
 	width: 75%
 }
-@media screen and (max-width: 1200px) {
-  .column {
-    width: 100%;
-  }
-}
+
 .column {
 	float: left;
 	width: 33.33%;
 	text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .column {
+    width: 100%;
+  }
 }
 body {
 	background-color: #173518;
