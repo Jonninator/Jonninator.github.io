@@ -23,7 +23,7 @@
 	width: 33.33%;
 	text-align: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000000px) {
   .column {
     width: 100%;
   }
