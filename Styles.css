@@ -7,11 +7,17 @@
 }
 
 .column {
+	
 	float: left;
 	width: 33.33%;
 	text-align: center;
 }
-@media screen and (max-width: 1000000px) {
+@media screen and (max-width: 1500px) {
+  .column {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 750px) {
   .column {
     width: 100%;
   }
