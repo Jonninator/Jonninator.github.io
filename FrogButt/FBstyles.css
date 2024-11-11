@@ -23,12 +23,13 @@
   }
 }
 body {
-	background-image: url("Compressed FORGBG.gif");
+	<!background-image: url("Compressed FORGBG.gif");
 	background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     padding:0;
-    margin:0;
+    margin:0;>
+	background-colour: #1e4620;
 	
 	font-family: "comic sans MS", "comic sans"
 	}
