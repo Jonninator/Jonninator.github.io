@@ -12,6 +12,13 @@
 	background: #F5FBFF;
 	border: 5px solid #F5FBFF;
 }
+.bottomrightplus{
+	position:fixed;
+	right: 75px;
+	bottom: 0px;
+	background: #F5FBFF;
+	border: 5px solid #F5FBFF;
+}
 .logo {
 	position:fixed;
 	left: 0px;
