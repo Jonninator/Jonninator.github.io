@@ -42,7 +42,7 @@
   }
 }
 body {
-    background-image: url("Images/Web BG.jpg");
+     background-image: url("Images/Web BG.jpg");
 	background-attachment: fixed;
     background-size: cover;
     height: 100vh;
