@@ -36,20 +36,24 @@
 	width: 33.33%;
 	text-align: center;
 }
+@media screen and (max-width: 1500px) {
+  .column {
+	  float: left;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .column {
+	  float: left;
+    width: 100%;
+  }
+}
 
 
 .newspaper {
   column-count: 3;
   column-gap: 5px;
 }
-@media screen and (max-width: 1500px) {
-  .newspaper {
-	  column-count: 2;
-  }
-@media screen and (max-width: 750px) {
-  .newspaper {
-	  column-count: 1;
-  }
 
 body {
      background-image: url("Images/Web BG.jpg");
