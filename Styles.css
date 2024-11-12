@@ -92,7 +92,7 @@ a:hover {color: #1E6894;text-decoration: underline;}
 
 .newspaper {
   column-count: 3;
-  column-gap: 5px;
+  column-gap: 2px;
 }
 
 @media screen and (max-width: 1700px) {
@@ -101,7 +101,7 @@ a:hover {color: #1E6894;text-decoration: underline;}
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
 	.newspaper {
 		column-count: 1;
 	}
