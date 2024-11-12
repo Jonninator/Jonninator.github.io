@@ -55,6 +55,16 @@
   column-gap: 5px;
 }
 
+@media screen and (max-width: 1700px) {
+	.newspaper {
+		column-count: 2;
+}
+
+@media screen and (max-width: 900px) {
+	.newspaper {
+		column-count: 1;
+}
+
 body {
      background-image: url("Images/Web BG.jpg");
 	background-attachment: fixed;
