@@ -23,11 +23,11 @@
   }
 }
 body {
-	background-image: url("FrogButt/Compressed FORGBG.gif");
+	background-color: #99EE99;
 	
 	font-family: "comic sans MS", "comic sans";
 	}
-h1 {color: Pink; font-size: 400%;}
+h1 {color: #449E48; font-size: 400%;}
 h2 {color: #449e48;}
 p {color: #3d8c40;}
 header{text-align: center;}
