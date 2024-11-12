@@ -87,7 +87,7 @@ a:hover {color: #1E6894;text-decoration: underline;}
 
 .newspaper {
   column-count: 3;
-  column-gap: 2px;
+  column-gap: 0px;
 }
 
 @media screen and (max-width: 1700px) {
