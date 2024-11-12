@@ -24,13 +24,12 @@
 }
 body {
 	background-image: url("FrogButt/Compressed FORGBG.gif");
-	background-attachment: fixed;
+	<!-- background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     padding:0;
     margin:0;
-	background-colour: #1e4620;
-	
+	background-colour: #1e4620; -->
 	font-family: "comic sans MS", "comic sans";
 	}
 h1 {color: #4caf50; font-size: 400%;}
