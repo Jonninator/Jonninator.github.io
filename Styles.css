@@ -30,12 +30,20 @@
 	left: 100px;
 	top: 7px;
 }
+
 .column {
-	
-	float: left;
-	width: 33.33%;
-	text-align: center;
+  float: left;
 }
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+
 @media screen and (max-width: 1300px) {
   .column {
 	  float: left;
