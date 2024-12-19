@@ -41,7 +41,7 @@
 }
 
 .right {
-  width: 75%;
+  width: 74%;
 }
 .row:after {
   content: "";
@@ -64,7 +64,7 @@
 
 
 body {
-     background-color: green;
+     background-color: teal;
 	font-family: "Trebuchet MS", "Trebuchet";
 	}
 h1 {color: #0B2738; font-size: 400%;}
