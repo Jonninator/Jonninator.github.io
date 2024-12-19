@@ -31,29 +31,20 @@
 	top: 7px;
 }
 
-.columnleft {
-  	float: left;
-	width: 25%;
+.column {
+  float: left;
+  padding: 10px;
 }
 
-.columnleft {
-  	float: left;
-	width: 75%;
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
 }
 
 
-@media screen and (max-width: 1300px) {
-  .column {
-	  float: left;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 900px) {
-  .column {
-	  float: left;
-    width: 100%;
-  }
-}
 
 
 .newspaper {
