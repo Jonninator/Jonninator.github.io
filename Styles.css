@@ -61,12 +61,6 @@
   column-gap: 0px;
 }
 
-@media screen and (max-width: 1500px) {
-	.newspaper {
-		column-count: 2;
-	}
-}
-
 @media screen and (max-width: 1200px) {
 	.newspaper {
 		column-count: 1;
@@ -75,7 +69,7 @@
 
 
 body {
-     background-color: red;
+     background-color: blue;
 	font-family: "Trebuchet MS", "Trebuchet";
 	}
 h1 {color: #0B2738; font-size: 400%;}
