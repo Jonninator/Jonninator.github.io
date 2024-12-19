@@ -23,22 +23,10 @@ function CheckForDead() {
 function FindButt(event) {
   let x = event.offsetX;
   let y = event.offsetY;
- 
+
+  document.getElementById("demo3").innerHTML = "Something WORKED";
   document.getElementById("demo").innerHTML = "The x-coordinate is: " + x;
   document.getElementById("demo2").innerHTML = "The y-coordinate is: " + y;
-  
-  if (x < 97 ){
-	  if (x > 64) {
-		  if (y < 290) {
-			  if (y > 280){
-				  changeVidtoJump();
-			  }
-		  }
-	  }
-  }
-
-  
-  CheckForDead();
 }
 
 
