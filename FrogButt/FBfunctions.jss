@@ -1,3 +1,3 @@
-function testing() {
-  alert("‧₊˚❀༉‧₊˚.")
+function buttclicked() {
+  alert("YOU TOUCH MY BUTT!?!?!")
 }
