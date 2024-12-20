@@ -7,3 +7,9 @@ alert("MY BUTT!?!?!!");
 }
 
 
+function buttclicked(event) {
+  let x = event.offsetX;
+  let y = event.offsetY;
+  alert (x + "is x and y is " + y);
+}
+
