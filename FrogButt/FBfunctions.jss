@@ -10,10 +10,12 @@ function FoxFriend() {
   let Flower = "                                                          . - .\n                                             _ _       /       \\       _ _\n here you                             (     ` ' . \\       / . ' `     )\n go!                                       ' - . _ . ( ; ; ; ) . _ . - '\n                                              . - '     , ` \" ` ,     ' - .\n                                            ( _ _ . - ' /       \\ ' - . _ _ )         _ , \n                                                        \\       / \\             _ _ /   / \n                                                           ' - '     \\       _ /   _ . '  \n                                   would you like it?   |   / _ _ /";
 
   if (confirm(Flower) == true) {
-   prompt("               ‧₊˚❀༉‧₊˚.\n*you now have a flower*", "Copy It: ❀ ʸᵒᵘ ᵐᵃʸ ⁿᵉᵉᵈ ᶦᵗ");
+   let reply = prompt("               ‧₊˚❀༉‧₊˚.\n*you now have a flower*", "Copy It: ❀ ʸᵒᵘ ᵐᵃʸ ⁿᵉᵉᵈ ᶦᵗ");
+    if (reply == "thanks" || reply == "thank you" || reply == "thankyou") {alert ("you're welcome")}
   } else {
     alert ("oh.");
   }
+
 }
 
 
