@@ -3,15 +3,15 @@ function buttlicked(event) {
  let y = event.offsetY;
   r=Math.random();
 if (r < 0.5) {
-  alert("YOU TOUCH MY BUTT!?!?! x is" + x)
+  alert("YOU TOUCH MY BUTT!?!?! x is" + x);
 }
 else {
-  alert("YOU DARE TOUCH MY BUTT!?!?! y is" + y)
+  alert("YOU DARE TOUCH MY BUTT!?!?! y is" + y);
 }
 
 }
 function buttclicked() {
-alert(
+ alert(
                              .-.
                        __   /   \   __
                       (  `'.\   /.'`  )
@@ -29,5 +29,5 @@ alert(
                                | _/ _.'
                                |/__/
                                 \
-)
+ );
 }
