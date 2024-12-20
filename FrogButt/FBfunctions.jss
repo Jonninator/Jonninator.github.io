@@ -12,7 +12,7 @@ else {
 }
 function buttclicked() {
  alert(
-                             .-.
+"                             .-.
                        __   /   \   __
                       (  `'.\   /.'`  )
                        '-._.(;;;)._.-'
@@ -28,6 +28,6 @@ function buttclicked() {
                           jgs   /  __/ /
                                | _/ _.'
                                |/__/
-                                \
+                                \"
  );
 }
