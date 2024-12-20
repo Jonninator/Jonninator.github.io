@@ -13,7 +13,7 @@ function Doorman() {
 	let giftmostbeautiful = prompt("       , - '   ;     !   ` - . \n     /   :     !     :     .   \\ \\   \n   | _   ;       _ _ :    ;     |  \\   \n   ) |   .     : ) ( .     !     |   | \n   |     :     ; ` '     ( _ )   (   |   - Hello. you cannot come in \n   |     :     :      .           |   |         without a gift most beautiful. \n   | _ __            :     .     | _ | \n          '  \" \" - - - . _ _ _ | ", "do you have a gift most beautiful?");
 	if (giftmostbeautiful == "❀") {
 		if (confirm(
-"   ,-' ;  ! `-. ____\n  / :  !  :  . \\        \\ \n |_ ;   __:  ;  |         \\ \n | .  :)(.   !  |            | \n |  :  ;`'  (_) (           |  - Allright, i guess we'll let you in\n |  :  :  .     |            | \n |___     :  .  |_______|\n      \"---.___|                    *do you enter the door?*") == true) {window.open("https://jonninator.github.io/FrogButt/Handsome%20Hopper.html");
+"   ,-' ;  ! `-. ____\n  / :  !  :  . \\        \\ \n |_ ;   __:  ;  |         \\ \n | .  :)(.   !  |            | \n |  :  ;`'  (_) (           |  - Allright, i guess we'll let you in\n |  :  :  .     |            | \n |___     :  .  |_______|\n      \"---.___|                    *do you enter the door?*\n NOTE: this will redirect you into the door which may be blocked by the portal you are acessing this world through") == true) {window.open("Secret.html");
         }
         else {alert ("Well if you want to come in just show the gift")}
     }
