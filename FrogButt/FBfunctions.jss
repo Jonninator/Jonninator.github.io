@@ -1,4 +1,4 @@
-function buttlicked(event) {
+function testing(event) {
  let x = event.offsetX;
  let y = event.offsetY;
  let r = Math.random();
