@@ -1,4 +1,39 @@
 
+body {
+     background-color: #dfebf5;
+	font-family: "Trebuchet MS", "Trebuchet";
+	}
+h1 {color: #0B2738; font-size: 400%;}
+h2 {color: #0B2738;}
+p {color: #0B2738;}
+header{text-align: left;}
+main {text-align: center; }
+footer {text-align: center; }
+d1 {
+	background-color: #1e4620;
+	color: #4caf50;
+	border: 3px solid #4caf50;
+	margin: 15px;
+	border-radius: 10px;
+	padding: 10px 17px;
+	font-size:200%;
+	text-align: left;
+	text-decoration: none;
+	display: inline-block;
+}
+dd {
+	margin-bottom: 1rem;
+	font-size:75%;
+	text-align: center;
+}
+
+a:link {
+	color: #1E6894;
+	text-decoration: none;
+}
+a:visited {color: #13425E; text-decoration: none;}
+a:hover {color: #1E6894;text-decoration: underline;}
+
 .center{
 	display: block;
 	margin-left: auto;
@@ -52,38 +87,5 @@
 
 
 
-body {
-     background-color: #dfebf5;
-	font-family: "Trebuchet MS", "Trebuchet";
-	}
-h1 {color: #0B2738; font-size: 400%;}
-h2 {color: #0B2738;}
-p {color: #0B2738;}
-header{text-align: left;}
-main {text-align: center; }
-footer {text-align: center; }
-d1 {
-	background-color: #1e4620;
-	color: #4caf50;
-	border: 3px solid #4caf50;
-	margin: 15px;
-	border-radius: 10px;
-	padding: 10px 17px;
-	font-size:200%;
-	text-align: left;
-	text-decoration: none;
-	display: inline-block;
-}
-dd {
-	margin-bottom: 1rem;
-	font-size:75%;
-	text-align: center;
-}
 
-a:link {
-	color: #1E6894;
-	text-decoration: none;
-}
-a:visited {color: #13425E; text-decoration: none;}
-a:hover {color: #1E6894;text-decoration: underline;}
 
