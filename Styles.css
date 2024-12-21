@@ -53,42 +53,14 @@ a:hover {color: #1E6894;text-decoration: underline;}
 }
 
 
-.columnSmall {
+.column {
 	
 	float: left;
-	width: 15%;
+	width: 33.33%;
 	text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  .columnSmall {
+  .column {
     width: 100%;
   }
 }
-	
-.columnMed {
-	
-	float: left;
-	width: 35%;
-	text-align: center;
-}
-@media screen and (max-width: 1000px) {
-  .columnMed {
-    width: 100%;
-  }
-}
-.columnLarge {
-	
-	float: left;
-	width: 40%;
-	text-align: center;
-}
-@media screen and (max-width: 1000px) {
-  .columnLarge {
-    width: 100%;
-  }
-}
-
-
-
-
-
