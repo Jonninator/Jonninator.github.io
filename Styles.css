@@ -63,6 +63,7 @@ a:hover {color: #1E6894;text-decoration: underline;}
   .columnSmall {
     width: 100%;
   }
+}
 	
 .columnMed {
 	
@@ -74,6 +75,7 @@ a:hover {color: #1E6894;text-decoration: underline;}
   .columnMed {
     width: 100%;
   }
+}
 .columnLarge {
 	
 	float: left;
@@ -84,6 +86,7 @@ a:hover {color: #1E6894;text-decoration: underline;}
   .columnLarge {
     width: 100%;
   }
+}
 
 
 
