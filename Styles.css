@@ -58,7 +58,7 @@ a:hover {color: #1E6894;text-decoration: underline;}
 	float: left;
 	width: 33.33%;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
   .column {
     width: 100%;
   }
