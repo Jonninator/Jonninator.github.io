@@ -56,10 +56,4 @@ a:hover {color: #1E6894;text-decoration: underline;}
 .column {
 	
 	float: left;
-	width: 33.33%;
-}
-@media screen and (max-width: 750px) {
-  .column {
-    width: 100%;
-  }
 }
