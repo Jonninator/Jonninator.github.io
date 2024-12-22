@@ -5,6 +5,10 @@ if yes in reply:
    alert("YOU BASTARD");
 }
 
+function testing2() {
+   alert("YOU BASTARD");
+}
+
 function FoxFriend() {
   let Flower = "                                                          . - .\n                                             _ _       /       \\       _ _\n here you                             (     ` ' . \\       / . ' `     )\n go!                                       ' - . _ . ( ; ; ; ) . _ . - '\n                                              . - '     , ` \" ` ,     ' - .\n                                            ( _ _ . - ' /       \\ ' - . _ _ )         _ , \n                                                        \\       / \\             _ _ /   / \n                                                           ' - '     \\       _ /   _ . '  \n                                   would you like it?   |   / _ _ /";
 
