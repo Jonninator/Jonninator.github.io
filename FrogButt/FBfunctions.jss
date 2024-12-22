@@ -1,6 +1,3 @@
-function GiftFromAFlowerToAGarden() {
-  alert("                                                          . - .\n                                             _ _       /       \\       _ _\n here you                             (     ` ' . \\       / . ' `     )\n go!                                       ' - . _ . ( ; ; ; ) . _ . - '\n                                              . - '     , ` \" ` ,     ' - .\n                                            ( _ _ . - ' /       \\ ' - . _ _ )         _ , \n                                                        \\       / \\             _ _ /   / \n                                                           ' - '     \\       _ /   _ . '  \n                                                                     |   / _ _ /");
-}
 
 function testing() {
 alert("MY BUTT!?!?!! update 1");
