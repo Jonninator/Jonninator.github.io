@@ -7,7 +7,8 @@ if (reply.includes("yes")) {
 }
 
 function testing2() {
-	let x = 2;
+	let x = event.offsetX;
+  	let y = event.offsetY;
    alert("YOU BASTARD" + x);
 }
 
