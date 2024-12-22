@@ -1,8 +1,9 @@
 
 function testing() {
 let reply = prompt("WHAT!!! You DARE to touch my BUTTOX!?!?!?!");
-if yes in reply: 
+if (yes in reply) {
    alert("YOU BASTARD");
+}
 }
 
 function testing2() {
