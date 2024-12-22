@@ -7,7 +7,7 @@ if (reply.includes("yes")) {
 }
 
 function testing2() {
-   alert("YOU BASTARD");
+   alert("YOU BBASTARD");
 }
 
 function FoxFriend() {
