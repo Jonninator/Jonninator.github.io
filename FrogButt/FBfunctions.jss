@@ -1,6 +1,8 @@
 
 function testing() {
-alert("MY BUTT!?!?!! update 1");
+let reply = prompt("WHAT!!! You DARE to touch my BUTTOX!?!?!?!");
+if yes in reply: 
+   alert("YOU BASTARD");
 }
 
 function FoxFriend() {
