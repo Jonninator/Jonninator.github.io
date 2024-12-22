@@ -1,7 +1,7 @@
 
 function testing() {
 let reply = prompt("WHAT!!! You DARE to touch my BUTTOX!?!?!?!");
-if (yes in reply) {
+if (reply.includes("yes")) {
    alert("YOU BASTARD");
 }
 }
