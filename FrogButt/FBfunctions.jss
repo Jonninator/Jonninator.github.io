@@ -1,6 +1,6 @@
 
 function testing() {
-let reply = prompt(".         , - '   ;     !   ` - .       .\n.     /   :     !     :     .   \\ \\ .\n.   | _   ;       _ _ :    ;     |  \\ .\n.   ) |   .     : ) ( .     !     |   | .\n.   |     :     ; ` '     ( _ )   (   | .\n.   |     :     :      .           |   |.\n.   | _ __            :     .     | _ | .\n.          '  \" \" - - - . _ _ _ |     .\nI shall put GREAT speaching here\nThis is how long my speaching may be\n1111111111111111122222222222222222222223456789012345678901234567890\n");
+let reply = prompt(".         , - '   ;     !   ` - .       .\n.     /   :     !     :     .   \\ \\      .\n.   | _   ;       _ _ :    ;     |  \\   .\n.   ) |   .     : ) ( .     !     |   |   .\n.   |     :     ; ` '     ( _ )   (   |  .\n.   |     :     :      .           |   |     .\n.   | _ __            :     .     | _ | .\n.          '  \" \" - - - . _ _ _ |     .\nI shall put GREAT speaching here\nThis is how long my speaching may be\n1111111111111111122222222222222222222223456789012345678901234567890\n");
 if (reply.includes("yes")) {
    alert("YOU BASTARD");
 }
