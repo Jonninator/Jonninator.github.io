@@ -1,6 +1,6 @@
 
 function testing() {
-let reply = prompt(".                         . - .                              .\n.  here   _ _       /       \\       _ _               .\n.  you   (     ` ' . \\       / . ' `     )                .\n.  go!      ' - . _ . ( ; ; ; ) . _ . - '                .\n.             . - '     , ` \" ` ,     ' - .                 .\n.         ( _ _ . - ' /       \\ ' - . _ _ )        _ , .\n.                       \\       / \\             _ _ /   / .\n.                          ' - '     \\       _ /   _ . '  .\n.    would you like it?      |   / _ _ /          .");
+let reply = prompt("                         . - .                              \n  here   _ _       /       \\       _ _               \n  you   (     ` ' . \\       / . ' `     )                \n  go!      ' - . _ . ( ; ; ; ) . _ . - '                \n             . - '     , ` \" ` ,     ' - .                 \n         ( _ _ . - ' /       \\ ' - . _ _ )        _ , \n                       \\       / \\             _ _ /   / \n                          ' - '     \\       _ /   _ . '  \n    would you like it?      |   / _ _ /          ");
 if (reply.includes("yes")) {
    alert("YOU BASTARD");
 }
