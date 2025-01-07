@@ -9,7 +9,7 @@ if (reply.includes("yes")) {
 function testing2() {
 	let x = event.offsetX;
   	let y = event.offsetY;
-   alert("YOU BASTARD" + x);
+   alert("1234567890123456789012345678901234567890123456789012345678901234567890/n2width testing and height testing/n2/n3/n4/n5/n6/n7/n8/n9/n0/n1/n2/n3/n4/n5/n6/n7/n8/n9/n0/n-/n");
 }
 
 function FoxFriend() {
