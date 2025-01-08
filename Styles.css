@@ -1,4 +1,10 @@
 
+.newspaper {
+ margin: auto;
+  column-count: 3;
+  width: 600px;
+}
+
 body {
      background-color: #dfebf5;
 	font-family: "Trebuchet MS", "Trebuchet";
