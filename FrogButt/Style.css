@@ -6,6 +6,11 @@
 	width: 98%
 }
 
+.logocolumn {
+	float: center;
+	width: 150px;
+}
+
 .column {
 	
 	float: left;
