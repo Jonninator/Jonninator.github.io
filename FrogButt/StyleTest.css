@@ -6,9 +6,10 @@
 	width: 98%
 }
 
-.logocolumn {
-	float: center;
-	width: 150px;
+.newspaper {
+ margin: auto;
+  column-count: 3;
+  width: 600px;
 }
 
 .column {
