@@ -5,11 +5,6 @@
   width: 600px;
 }
 
-@media screen and (max-width: 1000px) {
-  .newspaper {
-    width: 33%;
-  }
-}
 
 body {
      background-color: #90EE90; <!#dfebf5>
