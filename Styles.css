@@ -5,6 +5,12 @@
   width: 600px;
 }
 
+@media screen and (max-width: 1000px) {
+  .newspaper {
+    width: 33%;
+  }
+}
+
 body {
      background-color: #dfebf5;
 	font-family: "Courier New", Courier, monospace;
