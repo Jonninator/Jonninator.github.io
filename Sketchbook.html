@@ -3,7 +3,11 @@
 	<head>
 		<link rel="stylesheet" href="Styles.css">
 		<title>Jonathan De Vries</title>
-		<script src="Functions.jss"></script>
+		<script src="Functions.jss">
+			function myFunction() {
+  				alert("Hello! I am an alert box!");
+			}
+		</script>
 	</head> 
 	
 	<header>
@@ -53,7 +57,7 @@
 	<img src="Images/Flower Fox.jpg" usemap="#FLower" alt = "greeter" style = "width:200px; cursor: pointer;" >
 
 	<map name="Flower">
- 		<area shape="rect" coords="0,16,30,65" onClick = "GiftFromAFLowerToAGarden()" style = "cursor: grab;" alt="flower" href="#"> 
+ 		<area shape="rect" coords="0,16,30,65" onClick = "myFunction()" style = "cursor: grab;" alt="flower" href="#"> 
 	</map>
 	
 	<br>
