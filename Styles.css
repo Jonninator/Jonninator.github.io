@@ -5,6 +5,15 @@
   width: 600px;
 }
 
+.item {
+	width:800px;
+}
+
+@media screen and (max-width: 842px) {
+  .item {
+    width: 95%;
+  }
+}
 
 body {
      background-color: #dfebf5; <!#90EE90>
