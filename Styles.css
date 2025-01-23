@@ -6,10 +6,7 @@ div.container {
 div.container div {
 	float:left;
 }
-div.container li {
-	display: inline-block;
-	float: up;
-}
+
 
 
 .newspaper {
