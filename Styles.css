@@ -4,6 +4,7 @@ div.container {
   width: 1000px;
 }
 div.container div {
+	float:left;
 }
 
 .newspaper {
