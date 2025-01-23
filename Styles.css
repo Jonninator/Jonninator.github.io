@@ -1,6 +1,5 @@
 div.container {
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	list-style-type: none;
 }
 div.container div {
