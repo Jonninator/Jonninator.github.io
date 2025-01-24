@@ -1,10 +1,8 @@
-div.container {
-	list-style-type: none;
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
-div.container div {
-	float:left;
-}
-
 
 
 .newspaper {
