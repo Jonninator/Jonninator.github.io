@@ -285,7 +285,7 @@
                 const tempImage = document.createElement('img');
                 tempImage.src = newSrc;
                 tempImage.alt = newAlt;
-                tempImage.style.opacity = 0;
+
 
                 // When the new image loads, append it and fade in
                 tempImage.onload = () => {
@@ -295,11 +295,7 @@
                     // Trigger reflow to ensure the browser registers the new element
                     void tempImage.offsetWidth;
 
-                    // Fade in the new image
-                    tempImage.style.opacity = 1;
 
-                    // Fade out the current image
-                    mainImage.style.opacity = 0;
 
                     // After the transition, remove the old image and update mainImage
                     tempImage.addEventListener('transitionend', () => {
@@ -321,7 +317,7 @@
                 mainText.style.opacity = 0;
                 setTimeout(() => {
                     mainText.textContent = newText;
-                    mainText.style.opacity = 1;
+
                 }, 250); // Half of the transition duration for smoother effect
 
                 // Clear previous chat messages
