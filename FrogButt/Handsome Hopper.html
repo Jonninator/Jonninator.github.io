@@ -15,19 +15,21 @@
         </ul>
     </nav>
 
-	 <!-- Image Container -->
+
+    <!-- Image Container -->
     <div class="image-container">
         <!-- Default Image -->
         <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1000&q=80" alt="Forest" class="active" id="main-image">
     </div>
 
-	 <div class="text-container" id="main-text">
+    <!-- Text Container -->
+    <div class="text-container" id="main-text">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
         </p>
     </div>
 
-	 <!-- Chat Container -->
+    <!-- Chat Container -->
     <div class="chat-container">
         <div class="chat-box" id="chat-box">
             <!-- Messages will appear here -->
@@ -38,7 +40,8 @@
         </div>
     </div>
 
-<script>
+    <!-- Minimal JavaScript -->
+    <script>
         // Select all navigation links
         const navLinks = document.querySelectorAll('nav a');
         let mainImage = document.getElementById('main-image');
@@ -49,14 +52,14 @@
         let isTransitioning = false;
         const imageContainer = document.querySelector('.image-container');
 
-	  // Function to remove 'active' class from all nav links
+        // Function to remove 'active' class from all nav links
         function clearActiveClasses() {
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
         }
 
-	 navLinks.forEach(link => {
+        navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault(); // Prevent default anchor behavior
                 if (isTransitioning) return;
@@ -121,6 +124,54 @@
                 chatBox.innerHTML = '';
             });
         });
-</script>
+
+        // Function to add a message to the chat box
+        function addMessage(message, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message');
+            messageDiv.classList.add(type === 'user' ? 'user-message' : 'bot-message');
+            messageDiv.textContent = message;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+        }
+
+        // Function to handle user input
+        function handleUserInput() {
+            const input = userInput.value.trim();
+            if (input === '') return;
+
+            // Add user's message to chat
+            addMessage(input, 'user');
+
+            // Check if input is "Hello" (case-insensitive)
+            if (input.toLowerCase() === 'hello') {
+                // Find the active nav link to determine the response
+                const activeLink = document.querySelector('nav a.active');
+                if (activeLink) {
+                    const response = activeLink.getAttribute('data-response') || "Hi!";
+                    addMessage(response, 'bot');
+                } else {
+                    addMessage("Hi!", 'bot');
+                }
+            } else {
+                // Optional: Handle other inputs or ignore
+                addMessage("I can only respond to 'Hello' right now.", 'bot');
+            }
+
+            // Clear the input field
+            userInput.value = '';
+        }
+
+        // Event listener for send button
+        sendButton.addEventListener('click', handleUserInput);
+
+        // Event listener for Enter key in the input field
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleUserInput();
+            }
+        });
+    </script>
+
 </body>
 </html>
