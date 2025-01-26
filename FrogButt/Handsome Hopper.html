@@ -1,62 +1,43 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopper Handsome</title>
 <link rel="stylesheet" href="StyleTest.css">
-<script src="FBfunctions.jss"></script>
 </head>
 <body>
-<header>
-	<div style = "margin-right: auto; margin-left: auto;">
-		<div>
-			<a href="https://jonninator.github.io/FrogButt/Handsome%20Hopper.html">
-				<img src="Logo.png" alt="Logo" width = "100px" style = "float:left; margin-right: 10px;">
-			</a>
-		</div>
-		<div>
-			<h2 style = "text-align: right; float:left; font-size:200%;">
-				Jonathan<br>DeVries 
-			</h2>
-		</div>
-		<div>
-			<h2 style = "text-align:right;">
-				<a href="Paintings.html" style = "font-size:70%;">Paintings</a>
-				<a href="https://www.youtube.com/@JonniDeVr" style = "font-size:70%;">Animations</a>
-				<a href="Sketchbook.html" style = "font-size:70%;">Sketchbook</a>
-				<a href="About.html" style = "font-size:70%;">About</a>
-			</h2>
-			<h2  style = "text-align:center;"> 
-				<img src="Indc_full.png" alt="indicator" width = "150px" height = "100px">
-			</h2>
-			<h2 style = "text-align:left;">
-				<a href="Sculpture.html" style = "font-size:70%;">Sculpture</a>
-				<a href="PhotoDigital.html" style = "font-size:70%;">Photo/Digital</a>
-				<a href="Other.html" style = "font-size:70%;">Other</a> <!NOTE: will add link to old works here>
-			</h2>
-		</div>
-	</div>
+    <nav>
+        <ul>
+            <li><a href="#" data-img="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80" data-text="Mountain Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl. Sed id lorem eget ipsum tincidunt aliquet." data-response="Hi there! Enjoying the mountains?" class="active">Mountain</a></li>
+            <li><a href="#" data-img="https://jonninator.github.io/FrogButt/Fancy%20Frog.jpeg" data-text="What a nice little butt for a frog to have" data-response="Heyo!! nice butt hey?">Frog Buttox</a></li>
+            <li><a href="#" data-img="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1000&q=80" data-text="Forest Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue." data-response="Hey! The forest is so serene, isn't it?">Forest</a></li>
+            <li><a href="#" data-img="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80" data-text="Desert Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat velit ut lacus aliquam, vel scelerisque sapien egestas." data-response="Hi! The desert landscape is breathtaking!">Desert</a></li>
+        </ul>
+    </nav>
 
-</header>
-<main>
-<p>It would be <b>most</b> rude to click his butt</p>
-<h2 id="demo3">.</h2>
-	<button onClick="testing()"> test </button>
+	 <!-- Image Container -->
+    <div class="image-container">
+        <!-- Default Image -->
+        <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1000&q=80" alt="Forest" class="active" id="main-image">
+    </div>
 
-<video  autoplay muted id="VID1" class="centerSMOL"  onpause="changeVidtoExplode()" onClick="FoxFriend()" value = 1> 
- <source src="Frog Idle.mp4" type="video/mp4"/> 
-</video> 
-	<img src="Frog jump.JPG" width = "300px"  onCLick= "Doorman()">
-<p>Seriously, he might explode</p>
+	 <div class="text-container" id="main-text">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
+        </p>
+    </div>
 
-
-<p id="demo4">"testing stuff:"</p>
-<p id="demo">.</p>
-<p id="demo2">.</p>
-</main>
-<footer>
-		<a href="https://jonninator.github.io/index.html">Home</a>
-         <a href="https://www.youtube.com/@atelier_alister">Youtube</a>
-</footer>
-
+	 <!-- Chat Container -->
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message here...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+	
 
 </body>
 </html>
