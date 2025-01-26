@@ -1,22 +1,381 @@
-
 <!DOCTYPE html>
-<html>
-   <head>
-	  <link rel="stylesheet" href="FBstyles.css">
-      <title>Art Connect</title>
-   </head> 
-   <body>
-      <header>   
-      <h1>Artists Websites I admire</h1>
-      </header>
-      <main>
-			   <a href="https://www.andewitt.com/"><img alt="AndeWitt" src="AndeWitt.png" 
-				class="center" id="Ande" ></a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Image and Text Switcher with Interactive Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-      </main>
-      <footer>
-		 <a href="https://jonninator.github.io/index.html">Home</a>
-         <a href="https://www.youtube.com/@the_grumps">Youtube</a>
-      </footer>
-    </body>
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #575757;
+            color: #ffffff;
+        }
+
+        /* Image Container Styling */
+        .image-container {
+            margin-top: 60px; /* To prevent content being hidden behind fixed nav */
+            width: 90%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            position: relative;
+            height: 600px; /* Fixed height to prevent layout shifts */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .image-container img.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        /* Text Container Styling */
+        .text-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            min-height: 150px; /* Fixed height to maintain position */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+        .text-container p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        /* Chat Container Styling */
+        .chat-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            min-height: 200px; /* Fixed height to maintain position */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .chat-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            padding: 10px 15px;
+            border-radius: 20px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #d1e7dd;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background-color: #f8d7da;
+            align-self: flex-start;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-container input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .input-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        .input-container button:hover {
+            background-color: #575757;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+
+            .image-container {
+                height: 400px;
+            }
+
+            .text-container {
+                padding: 15px;
+                min-height: 120px;
+            }
+
+            .text-container p {
+                font-size: 0.9rem;
+            }
+
+            .chat-container {
+                padding: 15px;
+                min-height: 180px;
+            }
+
+            .input-container input[type="text"] {
+                font-size: 0.9rem;
+            }
+
+            .input-container button {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" data-img="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80" data-text="Mountain Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl. Sed id lorem eget ipsum tincidunt aliquet." data-response="Hi there! Enjoying the mountains?" class="active">Mountain</a></li>
+            <li><a href="#" data-img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" data-text="Beach Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero efficitur tincidunt. Integer ut eros euismod, viverra mi at, pulvinar augue." data-response="Hello! Loving the beach vibes?">Beach</a></li>
+            <li><a href="#" data-img="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1000&q=80" data-text="Forest Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue." data-response="Hey! The forest is so serene, isn't it?">Forest</a></li>
+            <li><a href="#" data-img="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80" data-text="Desert Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat velit ut lacus aliquam, vel scelerisque sapien egestas." data-response="Hi! The desert landscape is breathtaking!">Desert</a></li>
+        </ul>
+    </nav>
+
+    <!-- Image Container -->
+    <div class="image-container">
+        <!-- Default Image -->
+        <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1000&q=80" alt="Forest" class="active" id="main-image">
+    </div>
+
+    <!-- Text Container -->
+    <div class="text-container" id="main-text">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
+        </p>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message here...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <!-- Minimal JavaScript -->
+    <script>
+        // Select all navigation links
+        const navLinks = document.querySelectorAll('nav a');
+        let mainImage = document.getElementById('main-image');
+        const mainText = document.getElementById('main-text').querySelector('p');
+        const chatBox = document.getElementById('chat-box');
+        const sendButton = document.getElementById('send-button');
+        const userInput = document.getElementById('user-input');
+        let isTransitioning = false;
+        const imageContainer = document.querySelector('.image-container');
+
+        // Function to remove 'active' class from all nav links
+        function clearActiveClasses() {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                if (isTransitioning) return;
+                const newSrc = link.getAttribute('data-img');
+                const newAlt = link.textContent;
+                const newText = link.getAttribute('data-text');
+                const newResponse = link.getAttribute('data-response');
+
+                // Clear active classes and set the clicked link as active
+                clearActiveClasses();
+                link.classList.add('active');
+
+                // If the newSrc is the same as the current, do nothing
+                if (mainImage.src === newSrc) return;
+
+                isTransitioning = true;
+
+                // Create a new image element for transition
+                const tempImage = document.createElement('img');
+                tempImage.src = newSrc;
+                tempImage.alt = newAlt;
+                tempImage.style.opacity = 0;
+
+                // When the new image loads, append it and fade in
+                tempImage.onload = () => {
+                    // Append the new image to the container
+                    imageContainer.appendChild(tempImage);
+
+                    // Trigger reflow to ensure the browser registers the new element
+                    void tempImage.offsetWidth;
+
+                    // Fade in the new image
+                    tempImage.style.opacity = 1;
+
+                    // Fade out the current image
+                    mainImage.style.opacity = 0;
+
+                    // After the transition, remove the old image and update mainImage
+                    tempImage.addEventListener('transitionend', () => {
+                        if (mainImage && mainImage.parentNode) {
+                            mainImage.remove();
+                        }
+                        tempImage.id = 'main-image';
+                        mainImage = tempImage; // Update the mainImage reference
+                        isTransitioning = false;
+                    });
+                };
+
+                tempImage.onerror = () => {
+                    console.error('Failed to load image:', newSrc);
+                    isTransitioning = false;
+                };
+
+                // Update the text content with fade effect
+                mainText.style.opacity = 0;
+                setTimeout(() => {
+                    mainText.textContent = newText;
+                    mainText.style.opacity = 1;
+                }, 250); // Half of the transition duration for smoother effect
+
+                // Clear previous chat messages
+                chatBox.innerHTML = '';
+            });
+        });
+
+        // Function to add a message to the chat box
+        function addMessage(message, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message');
+            messageDiv.classList.add(type === 'user' ? 'user-message' : 'bot-message');
+            messageDiv.textContent = message;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+        }
+
+        // Function to handle user input
+        function handleUserInput() {
+            const input = userInput.value.trim();
+            if (input === '') return;
+
+            // Add user's message to chat
+            addMessage(input, 'user');
+
+            // Check if input is "Hello" (case-insensitive)
+            if (input.toLowerCase() === 'hello') {
+                // Find the active nav link to determine the response
+                const activeLink = document.querySelector('nav a.active');
+                if (activeLink) {
+                    const response = activeLink.getAttribute('data-response') || "Hi!";
+                    addMessage(response, 'bot');
+                } else {
+                    addMessage("Hi!", 'bot');
+                }
+            } else {
+                // Optional: Handle other inputs or ignore
+                addMessage("I can only respond to 'Hello' right now.", 'bot');
+            }
+
+            // Clear the input field
+            userInput.value = '';
+        }
+
+        // Event listener for send button
+        sendButton.addEventListener('click', handleUserInput);
+
+        // Event listener for Enter key in the input field
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleUserInput();
+            }
+        });
+    </script>
+
+</body>
 </html>
