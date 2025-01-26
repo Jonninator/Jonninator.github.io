@@ -1,25 +1,194 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hopper Handsome</title>
-<link rel="stylesheet" href="StyleTest.css">
+    <title>Handsome Hopper</title>
+    <link rel="stylesheet" href="StyleTest.css">
+    <style>
+
+
+ nav a {
+            display: inline-block;
+        }
+        
+        nav a:hover, nav a.active {
+            color: #530881;
+        }
+
+        /* Image Container Styling */
+        .image-container {
+            margin-left: 200px; /* To prevent content being hidden behind fixed nav */
+            width: 70%;
+            align: left;
+            margin-top: auto;
+            margin-right: auto;
+            text-align: center;
+            position: relative;
+            height: 600px; /* Fixed height to prevent layout shifts */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .image-container img.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        /* Text Container Styling */
+        .text-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            min-height: 150px; /* Fixed height to maintain position */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+        .text-container p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        /* Chat Container Styling */
+        .chat-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            min-height: 200px; /* Fixed height to maintain position */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .chat-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            padding: 10px 15px;
+            border-radius: 20px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #d1e7dd;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background-color: #f8d7da;
+            align-self: flex-start;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-container input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .input-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        .input-container button:hover {
+            background-color: #575757;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+
+            .image-container {
+                height: 400px;
+            }
+
+            .text-container {
+                padding: 15px;
+                min-height: 120px;
+            }
+
+            .text-container p {
+                font-size: 0.9rem;
+            }
+
+            .chat-container {
+                padding: 15px;
+                min-height: 180px;
+            }
+
+            .input-container input[type="text"] {
+                font-size: 0.9rem;
+            }
+
+            .input-container button {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="#" data-img="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80" data-text="Mountain Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl. Sed id lorem eget ipsum tincidunt aliquet." data-response="Hi there! Enjoying the mountains?" class="active">Mountain</a></li>
+            <li><a href="#" data-img="FrogButt.jpg" data-text="Mountain Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl. Sed id lorem eget ipsum tincidunt aliquet." data-response="Hi there! Enjoying the mountains?">Mountain</a></li>
             <li><a href="#" data-img="https://jonninator.github.io/FrogButt/Fancy%20Frog.jpeg" data-text="What a nice little butt for a frog to have" data-response="Heyo!! nice butt hey?">Frog Buttox</a></li>
             <li><a href="#" data-img="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1000&q=80" data-text="Forest Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue." data-response="Hey! The forest is so serene, isn't it?">Forest</a></li>
             <li><a href="#" data-img="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80" data-text="Desert Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat velit ut lacus aliquam, vel scelerisque sapien egestas." data-response="Hi! The desert landscape is breathtaking!">Desert</a></li>
         </ul>
     </nav>
 
-
     <!-- Image Container -->
     <div class="image-container">
         <!-- Default Image -->
-        <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1000&q=80" alt="Forest" class="active" id="main-image">
+        <img src="Logo.png" alt="Base" class="active" id="main-image">
     </div>
 
     <!-- Text Container -->
