@@ -1,5 +1,5 @@
 
-		
+/*Contains the logo, links for navigating the website*/	
 	.logo-container {
             margin-top: 5px; /* To prevent pressed against searchbar */
             width: 500px;
@@ -47,24 +47,25 @@
 			color: #13425E;
             text-decoration: underline;
         }
+/*END OF LOGO*/
 
-        /* Image Container Styling */
-        .image-container {
-            margin-top: 0px; /* To prevent content being hidden behind fixed nav */
+/* Image Container Styling for PhotoDigital */
+        .image-container {/*Main Container everything is in*/
+            margin-top: 0px; /* Unneccisary */
             width: 90%;
             max-width: 1300px;
             margin-left: auto;
             margin-right: auto;
 
             position: relative;
-            height: 750px; /* Fixed height to prevent layout shifts */
+            height: 750px;
         }
 
-        .image-container img {
+        .image-container img {/*Holds the Images for retraval*/
             width: 50%;
             height: 100%;
             object-fit: contain;
-            opacity: 0;
+            opacity: 0;/*so that there arent -n- images*/
             transition: opacity 0.1s ease-in-out;
             position: absolute;
             top: 0;
@@ -72,12 +73,12 @@
         }
 		
 		
-        .image-container img.active {
+        .image-container img.active {/*The currently Desplayed Image*/
             opacity: 1;
             position: relative;
         }
 		
-		.discription {
+	.discription {/*a box to put the description of the artwork in*/
             width: 30%;
             height: 100%;
             position: absolute;
@@ -85,34 +86,32 @@
             left: 79%;
         }
 		
-		.discription p {
-
+	.discription p {/*the text going in the box*/
             margin: 0;
-            color: #333333;
+            color: #0B2738;
         }
 		
-        .image-container nav {
+        .image-container nav {/*the navigator containter for going between images*/
             overflow: hidden;
             position: absolute;
-			width: 25%;
+	    width: 25%;
             top: 0;
-			left: 0;
+	    left: 0;
             z-index: 1000;
         }
 		
-		.image-container nav ul {
+	.image-container nav ul {/*the list set up for navigating between images*/
             list-style-type: none;
             margin: 0;
             padding: 0;
-            
             justify-content: flex-end;
         }
 
-        .image-container nav li {
+        .image-container nav li {/*the links themselves (just spacing them out)*/
             margin: 5px;
         }
 
-        .image-container nav a {
+        .image-container nav a {/*dictates the style of the links when resting*/
             display: block;
             color: #1E6894;
             text-align: right;
@@ -122,16 +121,16 @@
             cursor: help;
         }
 
-        .image-container nav a:hover{
+        .image-container nav a:hover{ /*dictates the style of the links when hovered*/
 			color: #1E6894;
             text-decoration: underline;
         }
 		
-	.image-container nav a.active {
+	.image-container nav a.active {/*dictates how the active image is indicated*/
 			color: #13425E;
         text-decoration: underline;
         }
-
+/*END OF PHOTODIGITAL FORMATTING*/
 		
 
 .center {
