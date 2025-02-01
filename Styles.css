@@ -193,7 +193,7 @@ a:link {
 	text-decoration: none;
 }
 a:visited {color: #13425E; text-decoration: none;}
-a:hover {color: #1E6894;text-decoration: underline;cursor: crosshair;}
+a:hover {color: #1E6894;text-decoration: underline;cursor: pointer;}
 
 .center{
 	display: block;
