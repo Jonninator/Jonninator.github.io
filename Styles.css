@@ -85,13 +85,7 @@
             top: 0;
             left: 79%;
         }
-		
-	.discription h1 {/*the words for the artworks to the right*/
-	    font-size: 130%;
-            margin: 0;
-            color: #37135e;
-        }
-		
+		/*the words for the artworks to the right*/
 	.discription p {
 	    margin-top: 8px;
             color: #0B2738;
@@ -170,7 +164,7 @@ body {
   	padding: 0;
         background-color: #dfebf5;
 }
-h1 {color: #0B2738;}
+h1 {font-size: 130%; margin: 0; color: #37135e;} /*subtitles*/
 h2 {color: #0B2738;}
 p {color: #0B2738;}
 header{text-align: left;}
