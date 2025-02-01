@@ -15,8 +15,9 @@
 		
 		<img src="https://jonninator.github.io/Images/Indicators/Indc_test_full.png"  usemap="#Links" alt="logo" id="logo">
 		
+		
 		<map name="Links">
-			<area shape="rect" coords="0, 36, 185, 187" alt="Main" href="https://jonninator.github.io/index.html"> 
+			<area style = "cursor: pointer;" shape="rect" coords="0, 36, 185, 187" alt="Main" href="https://jonninator.github.io/index.html"> 
 			<area style = "cursor: default;" shape="circle" coords="217, 165, 26" alt="Secret" href="https://jonninator.github.io/secret.html"> 
 		</map>
 		
@@ -38,10 +39,10 @@
     <div class="image-container">
 		<nav>
 			<ul>
-				<li><a href="#" data-img="https://jonninator.github.io/Images/Jonathan_Devries_Fluid_Doccumentation.jpg" data-text="A Phisical Collage Self Portrait<br>Essentially this self portrait explored messing around with the perceived boundaries of gender and what should be seen on whom. I don't really care	about the labels and will be me; Fluid." data-response="Hi there! Enjoying the mountains?">Fluid</a></li>
-				<li><a href="#" data-img="https://jonninator.github.io/Images/Radiance.jpg" data-text="A Digital Collage I made in 3rd year<br>not much to say just enjoyed making it and enjoy the end result" data-response="Hello! Loving the beach vibes?">Radiance</a></li>
-				<li><a href="#" data-img="https://jonninator.github.io/Images/Eden.jpg" data-text="Part 1 of Eden, a project I made for a Digital Studio Class and enjoyed the making of. It is a collauge of found, public domain images reflecting an ideal world for this fox" data-response="Hey! The forest is so serene, isn't it?">Eden</a></li>
-				<li><a href="#" data-img="https://jonninator.github.io/Images/Nod.jpg" data-text="Part 2 of Eden, The dystopia. the industrial revolution and its consequences on the poor fox lol">Nod</a></li>
+				<li><a href="#" data-img="https://jonninator.github.io/Images/Jonathan_Devries_Fluid_Doccumentation.jpg" data-text="Essentially this self portrait explored messing around with the perceived boundaries of gender and what should be seen on whom. I don't really care	about the labels and will be me; Fluid." data-title="A Phisical Collage Self Portrait">Fluid</a></li>
+				<li><a href="#" data-img="https://jonninator.github.io/Images/Radiance.jpg" data-text="not much to say just enjoyed making it and enjoy the end result" data-title="A Digital Collage I made in 3rd year">Radiance</a></li>
+				<li><a href="#" data-img="https://jonninator.github.io/Images/Eden.jpg" data-text="Eden was a project I made for a Digital Studio Class about exploitation of nature. It is a collage of found, public domain images reflecting an ideal world for this fox" data-title="Part 1 of Eden">Eden</a></li>
+				<li><a href="#" data-img="https://jonninator.github.io/Images/Nod.jpg" data-text="Eden was a project I made for a Digital Studio Class about exploitation of nature. It is a collage of found, public domain images reflecting the reality of exploitation of nature" data-title="Part 2 of Eden">Nod</a></li>
 			</ul>
 		</nav>
         <!-- Default Image -->
@@ -49,6 +50,9 @@
 		
 		<div class="discription" id="main-text">
 			<!-- Text will apear here -->
+			<h1>
+			
+			</h1>
 			<p>
 				
 			</p>
@@ -75,6 +79,7 @@
         const navLinks = document.querySelectorAll('div.image-container nav a');
         let mainImage = document.getElementById('main-image');
         const mainText = document.getElementById('main-text').querySelector('p');
+		const mainTitle = document.getElementById('main-text').querySelector('h1');
         const chatBox = document.getElementById('chat-box');
         const sendButton = document.getElementById('send-button');
         const userInput = document.getElementById('user-input');
@@ -95,7 +100,7 @@
                 const newSrc = link.getAttribute('data-img');
                 const newAlt = link.textContent;
                 const newText = link.getAttribute('data-text');
-                const newResponse = link.getAttribute('data-response');
+                const newTitle = link.getAttribute('data-title');
 
                 // Clear active classes and set the clicked link as active
                 clearActiveClasses();
@@ -149,56 +154,15 @@
                     mainText.style.opacity = 1;
                 }, 0); // Half of the transition duration for smoother effect
 
+				mainTitle.style.opacity = 0;
+                setTimeout(() => {
+                    mainTitle.textContent = newTitle;
+                    mainTitle.style.opacity = 1;
+                }, 0);
+
                 // Clear previous chat messages
                 chatBox.innerHTML = '';
             });
-        });
-
-        // Function to add a message to the chat box
-        function addMessage(message, type) {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('chat-message');
-            messageDiv.classList.add(type === 'user' ? 'user-message' : 'bot-message');
-            messageDiv.textContent = message;
-            chatBox.appendChild(messageDiv);
-            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
-        }
-
-        // Function to handle user input
-        function handleUserInput() {
-            const input = userInput.value.trim();
-            if (input === '') return;
-
-            // Add user's message to chat
-            addMessage(input, 'user');
-
-            // Check if input is "Hello" (case-insensitive)
-            if (input.toLowerCase() === 'hello') {
-                // Find the active nav link to determine the response
-                const activeLink = document.querySelector('nav a.active');
-                if (activeLink) {
-                    const response = activeLink.getAttribute('data-response') || "Hi!";
-                    addMessage(response, 'bot');
-                } else {
-                    addMessage("Hi!", 'bot');
-                }
-            } else {
-                // Optional: Handle other inputs or ignore
-                addMessage("I can only respond to 'Hello' right now.", 'bot');
-            }
-
-            // Clear the input field
-            userInput.value = '';
-        }
-
-        // Event listener for send button
-        sendButton.addEventListener('click', handleUserInput);
-
-        // Event listener for Enter key in the input field
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                handleUserInput();
-            }
         });
     </script>
 
