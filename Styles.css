@@ -86,8 +86,14 @@
             left: 79%;
         }
 		
-	.discription p {/*the text going in the box*/
+	.discription h1 {/*the words for the artworks to the right*/
+	    font-size: 130%;
             margin: 0;
+            color: #37135e;
+        }
+		
+	.discription p {
+	    margin-top: 8px;
             color: #0B2738;
         }
 		
