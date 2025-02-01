@@ -8,7 +8,7 @@ function GiftFromAFLowerToAGarden() {
 let OG_flower = "                                                          . - .\n                                             _ _       /       \\       _ _\n here you                             (     ` ' . \\       / . ' `     )\n go!                                       ' - . _ . ( ; ; ; ) . _ . - '\n                                              . - '     , ` \" ` ,     ' - .\n                                            ( _ _ . - ' /       \\ ' - . _ _ )         _ , \n                                                        \\       / \\             _ _ /   / \n                                                           ' - '     \\       _ /   _ . '  \n                                   would you like it?   |   / _ _ /";
   if (confirm(Flower) == true) {
    let reply = prompt("               ‧₊˚❀༉‧₊˚.\n*you now have a flower*", "Copy It: ❀ ʸᵒᵘ ᵐᵃʸ ⁿᵉᵉᵈ ᶦᵗ");
-    if (reply.includes("thank") || reply.includes("Thank") || reply.includes("THANK")) {alert ("you're welcome")}
+    if (reply.includes("thank") || reply.includes("Thank") || reply.includes("THANK")) {alert ("you're welcome, \nI hear minimal snails love flowers")}
   } else {
     alert ("oh.");
   }
