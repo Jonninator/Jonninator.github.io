@@ -1,4 +1,7 @@
-
+	.fade-in {
+		opacity:0;
+		transition: 120000ms;
+	}
 /*Contains the logo, links for navigating the website*/	
 	.logo-container {
             margin-top: 5px; /* To prevent pressed against searchbar */
