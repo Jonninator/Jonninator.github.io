@@ -155,10 +155,23 @@
 	width:800px;
 }
 
+.video {
+	margin-left: auto;
+	margin-right: auto;
+	width:800px;
+	height:450px;
+}
+
 @media screen and (max-width: 842px) {
   .item {
     width: 95%;
   }
+  	.video {
+		margin-left: auto;
+		margin-right: auto;
+		width:95%;
+		height:53.5%;
+	}
 }
 
 body {
