@@ -161,9 +161,21 @@
 	width:800px;
 	height:450px;
 }
+.inspire {
+	margin-left: auto;
+	margin-right: auto;
+	width:800px;
+}
+
+.inspire a {
+	font-size: 120%;
+}
 
 @media screen and (max-width: 842px) {
   .item {
+    width: 95%;
+  }
+	.inspire {
     width: 95%;
   }
   	.video {
