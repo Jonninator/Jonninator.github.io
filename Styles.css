@@ -169,6 +169,13 @@
 	font-size: 120%;
 }
 
+@media only screen and (max-width: 510px) {
+	.logo-container img {
+            margin-left:10px;
+			margin-right:10px;
+        }
+}
+
 @media only screen and (max-width: 800px) {
 	.video {
 		width:95%;
