@@ -6,6 +6,7 @@
 	.logo-container {
             margin-top: 5px; /* To prevent pressed against searchbar */
             width: 500px;
+		display:block;
             margin-left: auto;
             margin-right: auto;
             position: relative;
@@ -148,6 +149,7 @@
 }
 
 .item {
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width:800px;
