@@ -65,14 +65,13 @@
         }
 
         .image-container img {/*Holds the Images for retraval*/
-            width: 50%;
-            height: 100%;
+            width: 60%;
             object-fit: contain;
             opacity: 0;/*so that there arent -n- images*/
             transition: opacity 0.1s ease-in-out;
             position: absolute;
             top: 0;
-            left: 27%;
+            left: 15%;
         }
 		
 		
@@ -82,11 +81,10 @@
         }
 		
 	.discription {/*a box to put the description of the artwork in*/
-            width: 30%;
-            height: 100%;
+            width: 24%;
             position: absolute;
             top: 0;
-            left: 79%;
+            left: 76%;
         }
 		/*the words for the artworks to the right*/
 	.discription p {
@@ -97,7 +95,7 @@
         .image-container nav {/*the navigator containter for going between images*/
             overflow: hidden;
             position: absolute;
-	    width: 25%;
+	    width: 15%;
             top: 0;
 	    left: 0;
             z-index: 1000;
@@ -173,8 +171,45 @@
 
 @media only screen and (max-width: 800px) {
 	.video {
-		width:95%%;
+		width:95%;
 	}
+	.image-container img {
+            width: 100%;
+            position: static;
+            top: auto;
+            left: auto;
+        }
+		
+		
+        .image-container img.active {
+            position: static;
+        }
+		
+	.discription {
+            width: 100%;
+            position: static;
+            top: auto;
+            left: auto;
+        }
+	.image-container nav {
+        position: static;
+	    width: 50%;
+        top: auto;
+	    left: auto;
+		margin-left:auto;
+		margin-right:auto;
+		
+        }
+	.image-container nav li {/*the links themselves (just spacing them out)*/
+            display: inline-block;
+		
+        }
+.discription p {
+text-align:center;
+        }
+	.discription h1 {
+text-align:center;
+        }
 }
 
 @media only screen and (max-width: 842px) {
