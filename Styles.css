@@ -239,9 +239,6 @@
             margin-right: 2.5%;
             position: relative; /* Fixed height to prevent layout shifts */
         }
-	.logo-container li {
-		font-size: 10%;
-	}
 }
 
 @media only screen and (max-width: 800px) {
