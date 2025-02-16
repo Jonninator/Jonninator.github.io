@@ -264,10 +264,11 @@
             left: auto;
         }
 	.image-container nav {
-        position: static;
-	    width: 50%;
-        top: auto;
-	    left: auto;
+       		position: static;
+	   	width: 100%;
+		text-align:center;
+        	top: auto;
+	    	left: auto;
 		margin-left:auto;
 		margin-right:auto;
 		
