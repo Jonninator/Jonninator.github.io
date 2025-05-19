@@ -56,10 +56,10 @@ background-color:#66000000;
 	}
 /*Contains the logo, links for navigating the website*/	
 	.logo-container {
-            margin-top: 5px; /* To prevent pressed against searchbar */
+            margin-top: 15px; /* To prevent pressed against searchbar */
             width: 500px;
 		display:block;
-            margin-left: auto;
+            margin-left: 15px;
             margin-right: auto;
             position: relative;
             height: 250px; /* Fixed height to prevent layout shifts */
