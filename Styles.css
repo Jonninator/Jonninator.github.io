@@ -300,6 +300,12 @@ background-color:#66000000;
             margin-right: 2.5%;
             position: relative; /* Fixed height to prevent layout shifts */
         }
+	.small-logo-container {
+            width: 95%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+            position: relative; /* Fixed height to prevent layout shifts */
+        }
 }
 
 @media only screen and (max-width: 800px) {
