@@ -28,7 +28,7 @@
   display: block;
 }
 
-.dropup-content a:hover { background-color: #dfebf5; color:#37135e;}
+.dropup-content a:hover { background-color: #dfebf5CC; color:#37135e;}
 
 .dropup:hover .dropup-content {
   display: block;
