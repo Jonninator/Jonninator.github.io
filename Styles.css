@@ -62,7 +62,7 @@ background-color:#66000000;
             margin-left: 15px;
             margin-right: auto;
             position: relative;
-            height: 250px; /* Fixed height to prevent layout shifts */
+            height: 125px; /* Fixed height to prevent layout shifts */
         }
 		
 	.logo-container img {
