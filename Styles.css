@@ -1,7 +1,7 @@
 .dropbtn {
   font-family: "Courier New", Courier, monospace;
 background-color:#66000000;
-  color: #1E6894;
+  color: rgb(30, 104, 148);
   padding: 2px;
   font-size: 16px;
   border: none;
@@ -21,8 +21,8 @@ background-color:#66000000;
 }
 
 .dropup-content a {
-  color: #13425E;
- background-color: #dfebf580;
+  color: rgb(19, 66, 94);
+ background-color: rgb(223, 235, 245, 0.6);
   padding: 4px 4px;
   text-decoration: none;
   display: block;
@@ -419,4 +419,5 @@ a:hover {color: #1E6894;text-decoration: underline;cursor: pointer;}
 	
 	float: left;
 }
+
 
